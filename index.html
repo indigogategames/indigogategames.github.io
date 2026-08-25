@@ -6,11 +6,18 @@
 
   <title>Indigo Gate Games | 인디고게이트게임즈</title>
 
-  <meta name="description" content="Indigo Gate Games - 재미있는 게임을 만드는 인디 게임 스튜디오">
+  <meta
+    name="description"
+    content="Indigo Gate Games - 재미있는 게임을 만드는 인디 게임 스튜디오"
+  >
+
   <meta name="author" content="Indigo Gate Games">
 
   <meta property="og:title" content="Indigo Gate Games">
-  <meta property="og:description" content="Indie games made with passion.">
+  <meta
+    property="og:description"
+    content="Indie games made with passion."
+  >
   <meta property="og:type" content="website">
 
   <style>
@@ -22,7 +29,7 @@
       --muted: #9ba2b5;
       --accent: #7c6cff;
       --accent-2: #9f8cff;
-      --border: rgba(255,255,255,0.09);
+      --border: rgba(255, 255, 255, 0.09);
     }
 
     * {
@@ -43,6 +50,7 @@
         "Noto Sans KR",
         Arial,
         sans-serif;
+
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -53,7 +61,10 @@
       text-decoration: none;
     }
 
-    /* ---------- Header ---------- */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       position: fixed;
@@ -61,16 +72,19 @@
       left: 0;
       width: 100%;
       z-index: 100;
-      background: rgba(8, 9, 13, 0.75);
+
+      background: rgba(8, 9, 13, 0.78);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .nav {
       max-width: 1100px;
       margin: auto;
-      height: 72px;
-      padding: 0 24px;
+
+      min-height: 90px;
+      padding: 5px 24px;
 
       display: flex;
       align-items: center;
@@ -80,30 +94,35 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
+
       font-weight: 700;
       letter-spacing: -0.3px;
     }
 
+    /* 상단 로고 */
+
     .brand img {
-      width: 38px;
-      height: 38px;
+      width: 80px;
+      height: 80px;
+
       object-fit: contain;
-      border-radius: 10px;
+      border-radius: 16px;
     }
 
     .brand-name {
-      font-size: 16px;
+      font-size: 17px;
     }
 
     nav {
       display: flex;
-      gap: 28px;
+      gap: 30px;
     }
 
     nav a {
       color: var(--muted);
       font-size: 14px;
+
       transition: color 0.2s ease;
     }
 
@@ -111,11 +130,15 @@
       color: var(--text);
     }
 
-    /* ---------- Hero ---------- */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100vh;
-      padding: 140px 24px 100px;
+
+      padding: 160px 24px 110px;
 
       display: flex;
       align-items: center;
@@ -123,70 +146,100 @@
 
       position: relative;
       overflow: hidden;
+
       text-align: center;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
-      width: 650px;
-      height: 650px;
-      background: radial-gradient(
-        circle,
-        rgba(124,108,255,0.20) 0%,
-        rgba(124,108,255,0.07) 35%,
-        transparent 70%
-      );
-      top: 40%;
+
+      width: 750px;
+      height: 750px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(124, 108, 255, 0.22) 0%,
+          rgba(124, 108, 255, 0.07) 35%,
+          transparent 70%
+        );
+
+      top: 45%;
       left: 50%;
+
       transform: translate(-50%, -50%);
+
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
-      max-width: 800px;
+
+      max-width: 850px;
+
       z-index: 1;
     }
 
+    /* 메인 로고 */
+
     .hero-logo {
-      width: 2048px;
-      height: 2048px;
+      width: 300px;
+      height: 300px;
+
       object-fit: contain;
-      margin-bottom: 28px;
-      border-radius: 25px;
-      filter: drop-shadow(0 15px 35px rgba(124,108,255,0.18));
+
+      margin-bottom: 35px;
+
+      border-radius: 35px;
+
+      filter:
+        drop-shadow(
+          0 20px 45px rgba(124, 108, 255, 0.20)
+        );
     }
 
     .eyebrow {
       color: var(--accent-2);
+
       font-size: 13px;
       font-weight: 700;
+
       letter-spacing: 3px;
       text-transform: uppercase;
+
       margin-bottom: 18px;
     }
 
     h1 {
       font-size: clamp(44px, 8vw, 78px);
+
       line-height: 1.05;
+
       letter-spacing: -4px;
+
       margin-bottom: 24px;
     }
 
     .hero-description {
-      max-width: 580px;
-      margin: 0 auto 34px;
+      max-width: 600px;
+
+      margin: 0 auto 35px;
+
       color: var(--muted);
+
       font-size: 17px;
     }
 
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
-      padding: 13px 22px;
+      padding: 13px 23px;
+
       border-radius: 999px;
 
       background: var(--text);
@@ -202,10 +255,15 @@
 
     .button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(255,255,255,0.12);
+
+      box-shadow:
+        0 10px 30px rgba(255, 255, 255, 0.12);
     }
 
-    /* ---------- Sections ---------- */
+
+    /* =========================
+       COMMON SECTIONS
+    ========================= */
 
     section {
       padding: 110px 24px;
@@ -218,66 +276,90 @@
 
     .section-label {
       color: var(--accent-2);
+
       font-size: 12px;
       font-weight: 700;
+
       letter-spacing: 2px;
       text-transform: uppercase;
+
       margin-bottom: 12px;
     }
 
     h2 {
       font-size: clamp(30px, 5vw, 44px);
+
       letter-spacing: -2px;
+
       margin-bottom: 18px;
     }
 
     .section-description {
       color: var(--muted);
+
       max-width: 650px;
+
       margin-bottom: 50px;
     }
 
-    /* ---------- About ---------- */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       background: var(--bg-soft);
+
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
     .about-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 24px;
     }
 
     .card {
       background: var(--card);
+
       border: 1px solid var(--border);
+
       border-radius: 20px;
+
       padding: 30px;
     }
 
     .card h3 {
       font-size: 20px;
+
       margin-bottom: 12px;
     }
 
     .card p {
       color: var(--muted);
+
       font-size: 15px;
     }
 
-    /* ---------- Games ---------- */
+
+    /* =========================
+       GAMES
+    ========================= */
 
     .game-card {
-      min-height: 260px;
+      min-height: 280px;
+
       border-radius: 24px;
+
       border: 1px solid var(--border);
+
       background:
         radial-gradient(
           circle at 80% 20%,
-          rgba(124,108,255,0.16),
+          rgba(124, 108, 255, 0.16),
           transparent 35%
         ),
         var(--card);
@@ -285,41 +367,55 @@
       padding: 34px;
 
       display: flex;
+
       flex-direction: column;
+
       justify-content: flex-end;
     }
 
     .game-status {
       display: inline-block;
+
       width: fit-content;
 
       padding: 5px 11px;
+
       margin-bottom: 18px;
 
       border-radius: 999px;
 
-      background: rgba(124,108,255,0.12);
+      background: rgba(124, 108, 255, 0.12);
+
       color: var(--accent-2);
 
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 1px;
+
       text-transform: uppercase;
     }
 
     .game-card h3 {
       font-size: 30px;
+
       letter-spacing: -1px;
+
       margin-bottom: 8px;
     }
 
     .game-card p {
       color: var(--muted);
+
       font-size: 14px;
+
       max-width: 550px;
     }
 
-    /* ---------- Contact ---------- */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       text-align: center;
@@ -327,58 +423,76 @@
 
     .contact-box {
       max-width: 700px;
+
       margin: 0 auto;
 
       padding: 50px 30px;
 
-      background: linear-gradient(
-        145deg,
-        rgba(124,108,255,0.12),
-        rgba(255,255,255,0.02)
-      );
+      background:
+        linear-gradient(
+          145deg,
+          rgba(124, 108, 255, 0.12),
+          rgba(255, 255, 255, 0.02)
+        );
 
       border: 1px solid var(--border);
+
       border-radius: 24px;
     }
 
     .email {
       display: inline-block;
+
       margin-top: 10px;
 
       color: var(--text);
+
       font-size: 18px;
       font-weight: 600;
 
-      border-bottom: 1px solid rgba(255,255,255,0.25);
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.25);
+
       padding-bottom: 3px;
     }
 
     .email:hover {
       color: var(--accent-2);
+
       border-color: var(--accent-2);
     }
 
-    /* ---------- Footer ---------- */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 35px 24px;
+
       border-top: 1px solid var(--border);
+
       color: #70778a;
+
       font-size: 12px;
     }
 
     .footer-inner {
       max-width: 1000px;
+
       margin: auto;
 
       display: flex;
+
       justify-content: space-between;
       align-items: center;
+
       gap: 20px;
     }
 
     .footer-links {
       display: flex;
+
       gap: 20px;
     }
 
@@ -386,16 +500,34 @@
       color: var(--text);
     }
 
-    /* ---------- Mobile ---------- */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
+
       .nav {
-        height: 64px;
+        min-height: 75px;
+
+        padding: 5px 16px;
       }
 
+      /* 모바일 상단 로고 */
+
       .brand img {
-        width: 1024px;
-        height: 1024px;
+        width: 60px;
+        height: 60px;
+
+        border-radius: 13px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-name {
+        font-size: 14px;
       }
 
       nav {
@@ -406,13 +538,23 @@
         font-size: 12px;
       }
 
+
+      /* 모바일 메인 */
+
       .hero {
-        padding-top: 120px;
+        padding:
+          135px
+          20px
+          90px;
       }
 
       .hero-logo {
-        width: 90px;
-        height: 90px;
+        width: 220px;
+        height: 220px;
+
+        margin-bottom: 28px;
+
+        border-radius: 28px;
       }
 
       h1 {
@@ -422,6 +564,9 @@
       .hero-description {
         font-size: 15px;
       }
+
+
+      /* Sections */
 
       section {
         padding: 80px 20px;
@@ -435,41 +580,86 @@
         padding: 25px;
       }
 
+      .game-card {
+        min-height: 240px;
+
+        padding: 26px;
+      }
+
+
+      /* Footer */
+
       .footer-inner {
         flex-direction: column;
+
         text-align: center;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- Header -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="nav">
 
       <a href="#" class="brand">
-        <img src="logo.png" alt="Indigo Gate Games Logo">
-        <span class="brand-name">Indigo Gate Games</span>
+
+        <img
+          src="logo.png"
+          alt="Indigo Gate Games Logo"
+        >
+
+        <span class="brand-name">
+          Indigo Gate Games
+        </span>
+
       </a>
 
+
       <nav>
-        <a href="#about">About</a>
-        <a href="#games">Games</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#games">
+          Games
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- Hero -->
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
   <main>
+
+
+    <!-- HERO -->
 
     <section class="hero">
 
       <div class="hero-content">
+
 
         <img
           src="logo.png"
@@ -477,59 +667,108 @@
           class="hero-logo"
         >
 
-        <div class="eyebrow">Indie Game Studio</div>
+
+        <div class="eyebrow">
+          Indie Game Studio
+        </div>
+
 
         <h1>
           Indigo Gate Games
         </h1>
 
+
         <p class="hero-description">
-          작은 아이디어에서 시작해 오래 기억에 남는 게임을 만듭니다.
+
+          작은 아이디어에서 시작해
+          오래 기억에 남는 게임을 만듭니다.
+
           <br>
-          재미있는 경험과 새로운 이야기를 만들어가는 인디 게임 스튜디오입니다.
+
+          재미있는 경험과 새로운 이야기를 만들어가는
+          인디 게임 스튜디오입니다.
+
         </p>
 
-        <a href="#games" class="button">
+
+        <a
+          href="#games"
+          class="button"
+        >
           Our Games ↓
         </a>
+
 
       </div>
 
     </section>
 
 
-    <!-- About -->
-    <section id="about" class="about">
+
+    <!-- ABOUT -->
+
+    <section
+      id="about"
+      class="about"
+    >
 
       <div class="container">
 
-        <div class="section-label">About Us</div>
 
-        <h2>Games made with passion.</h2>
+        <div class="section-label">
+          About Us
+        </div>
+
+
+        <h2>
+          Games made with passion.
+        </h2>
+
 
         <p class="section-description">
+
           Indigo Gate Games는 재미있는 게임을 만들기 위해
           끊임없이 아이디어를 고민하고 새로운 것에 도전하는
           인디 게임 스튜디오입니다.
+
         </p>
+
 
         <div class="about-grid">
 
-          <div class="card">
-            <h3>Independent</h3>
-            <p>
-              우리의 아이디어와 방향성을 바탕으로
-              자유롭고 독창적인 게임을 만들어갑니다.
-            </p>
-          </div>
 
           <div class="card">
-            <h3>Player First</h3>
+
+            <h3>
+              Independent
+            </h3>
+
             <p>
-              플레이어가 즐겁게 플레이하고 다시 찾고 싶은
-              게임 경험을 만드는 것을 중요하게 생각합니다.
+
+              우리의 아이디어와 방향성을 바탕으로
+              자유롭고 독창적인 게임을 만들어갑니다.
+
             </p>
+
           </div>
+
+
+          <div class="card">
+
+            <h3>
+              Player First
+            </h3>
+
+            <p>
+
+              플레이어가 즐겁게 플레이하고
+              다시 찾고 싶은 게임 경험을 만드는 것을
+              중요하게 생각합니다.
+
+            </p>
+
+          </div>
+
 
         </div>
 
@@ -538,31 +777,53 @@
     </section>
 
 
-    <!-- Games -->
+
+    <!-- GAMES -->
+
     <section id="games">
 
       <div class="container">
 
-        <div class="section-label">Our Games</div>
 
-        <h2>What we're making.</h2>
+        <div class="section-label">
+          Our Games
+        </div>
+
+
+        <h2>
+          What we're making.
+        </h2>
+
 
         <p class="section-description">
+
           현재 새로운 게임을 개발하고 있습니다.
-          앞으로 다양한 플랫폼에서 재미있는 게임을 선보일 예정입니다.
+          앞으로 다양한 플랫폼에서 재미있는 게임을
+          선보일 예정입니다.
+
         </p>
 
+
         <div class="game-card">
+
 
           <span class="game-status">
             In Development
           </span>
 
-          <h3>Our Next Game</h3>
+
+          <h3>
+            Our Next Game
+          </h3>
+
 
           <p>
-            Indigo Gate Games가 준비하고 있는 새로운 게임을 기대해주세요.
+
+            Indigo Gate Games가 준비하고 있는
+            새로운 게임을 기대해주세요.
+
           </p>
+
 
         </div>
 
@@ -571,21 +832,40 @@
     </section>
 
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
+
+    <!-- CONTACT -->
+
+    <section
+      id="contact"
+      class="contact"
+    >
 
       <div class="container">
 
+
         <div class="contact-box">
 
-          <div class="section-label">Contact</div>
 
-          <h2>Let's talk.</h2>
+          <div class="section-label">
+            Contact
+          </div>
 
-          <p class="section-description" style="margin: 0 auto;">
+
+          <h2>
+            Let's talk.
+          </h2>
+
+
+          <p
+            class="section-description"
+            style="margin: 0 auto;"
+          >
+
             게임에 대한 문의나 기타 문의사항이 있으시면
             아래 이메일로 연락해주세요.
+
           </p>
+
 
           <a
             href="mailto:indigogategames@gmail.com"
@@ -594,33 +874,48 @@
             indigogategames@gmail.com
           </a>
 
+
         </div>
 
       </div>
 
     </section>
 
+
   </main>
 
 
-  <!-- Footer -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
     <div class="footer-inner">
 
+
       <div>
-        © 2026 Indigo Gate Games. All rights reserved.
+        © 2026 Indigo Gate Games.
+        All rights reserved.
       </div>
 
+
       <div class="footer-links">
-        <a href="mailto:indigogategames@gmail.com">
+
+        <a
+          href="mailto:indigogategames@gmail.com"
+        >
           Contact
         </a>
+
       </div>
+
 
     </div>
 
   </footer>
+
 
 </body>
 </html>
